@@ -17,8 +17,8 @@ let cursosLocalStorage = [];
         mostrarHTML();
     });
     document.addEventListener( "DOMContentLoaded", ()=>{
-        let cargarCursos = null || undefined ? [] : JSON.parse(localStorage.getItem("cursos"));
-        arrayCursos = cargarCursos;
+        let cargarCursos = JSON.parse(localStorage.getItem("cursos"));
+        arrayCursos =  cargarCursos ? cargarCursos : [];
         mostrarHTML();
     } )
 })()
